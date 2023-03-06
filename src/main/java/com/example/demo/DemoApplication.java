@@ -1,22 +1,17 @@
 package com.example.demo;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
+//Class that can be used to bootstrap and launch a Spring application from a Java main method.
+import org.springframework.boot.SpringApplication;
+/* This is a convenience annotation that is equivalent to declaring
+ @Configuration, @EnableAutoConfiguration and @ComponentScan.*/
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+/* @SpringBootApplication. 
+This annotation is known as a meta-annotation, 
+it combines @SpringBootConfiguration,
+@EnableAutoConfiguration and @ComponentScan */
 @SpringBootApplication
-@RestController
 public class DemoApplication {
     public static void main(String[] args) {
       SpringApplication.run(DemoApplication.class, args);
-    }
-	@GetMapping("/")
-    public String hello() {
-      return "Hello Capgemini!";
-    }
-    @GetMapping("/hello")
-    public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-      return String.format("Hello Capgemini %s!", name);
     }
 }
