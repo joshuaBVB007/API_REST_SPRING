@@ -9,6 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 This annotation is known as a meta-annotation, 
 it combines @SpringBootConfiguration,
 @EnableAutoConfiguration and @ComponentScan */
+
+
 @SpringBootApplication
 public class DemoApplication {
     public static void main(String[] args) {

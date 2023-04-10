@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 @Entity
 class Employee {
 
-  private @Id @GeneratedValue Long id;
+  private @Id @GeneratedValue Integer id;
   private String name;
   private String role;
 
@@ -18,8 +18,12 @@ class Employee {
     this.role = role;
   }
 
-  public Long getId() {
+  public Integer getId() {
     return this.id;
+  }
+  
+  public void setId(Integer id) {
+	    this.id = id;
   }
 
   public String getName() {
@@ -28,10 +32,6 @@ class Employee {
 
   public String getRole() {
     return this.role;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
   }
 
   public void setName(String name) {

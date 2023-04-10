@@ -1,0 +1,6 @@
+.\mvnw spring-boot:run
+
+Build systems utilizados en Gradle y Maven
+
+Starters son los paquetes que incluimos en el POM.xml
+es recomendable no establecer version segun el manual
